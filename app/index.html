@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Black Friday, Checked — Real Deals, Verified 27 Nov 2026</title>
+<meta name="description" content="30 real Black Friday deals, each price checked 27 Nov 2026 against the named source, with an honest verdict on whether it is really a deal.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="./style.css">
+</head>
+<body>
+<header class="topbar">
+  <span class="brand">BLACK FRIDAY, <b>CHECKED.</b></span>
+  <nav>
+    <a href="#/">All deals</a>
+    <a href="#/compare" id="nav-compare">Compare stores</a>
+    <a href="#method">How we checked</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h1>Real Black Friday deals. <em>Every price checked today.</em></h1>
+  <p>30 deals from Amazon, Best Buy, Walmart and Target — sale price, usual price, discount, store link and check time on every card, plus an honest verdict: new low, strong deal, solid, or just a routine sale.</p>
+  <div class="stats">
+    <div class="stat"><span class="num" id="stat-deals">–</span><span class="lbl">Deals listed</span></div>
+    <div class="stat"><span class="num" id="stat-saved">–</span><span class="lbl">Total savings</span></div>
+    <div class="stat"><span class="num" id="stat-newlow">–</span><span class="lbl">New lows</span></div>
+    <div class="stat"><span class="num">4</span><span class="lbl">Stores</span></div>
+  </div>
+</section>
+
+<main>
+  <div id="list-view">
+    <div class="filters">
+      <input type="search" id="f-search" placeholder="Search a product, brand or store…" aria-label="Search deals">
+      <label>Category <select id="f-category" aria-label="Filter by category"></select></label>
+      <label>Store <select id="f-store" aria-label="Filter by store"></select></label>
+      <label>Min. discount
+        <select id="f-minoff" aria-label="Filter by minimum discount">
+          <option value="0">Any</option>
+          <option value="25">25%+</option>
+          <option value="40">40%+</option>
+          <option value="50">50%+</option>
+        </select>
+      </label>
+      <label>Verdict
+        <select id="f-verdict" aria-label="Filter by verdict">
+          <option value="All">Any</option>
+          <option value="newlow">New low</option>
+          <option value="strong">Strong deal</option>
+          <option value="solid">Solid</option>
+          <option value="routine">Routine sale</option>
+        </select>
+      </label>
+      <label>Sort
+        <select id="f-sort" aria-label="Sort deals">
+          <option value="discount">Biggest discount</option>
+          <option value="saved">Biggest saving ($)</option>
+          <option value="price">Lowest price</option>
+          <option value="newlow">New lows first</option>
+        </select>
+      </label>
+    </div>
+    <p id="count"></p>
+    <div class="grid" id="deals"></div>
+  </div>
+
+  <div id="detail-view" hidden></div>
+  <div id="compare-view" hidden></div>
+
+  <section class="method" id="method">
+    <h2>How we checked</h2>
+    <p id="checked-on"></p>
+    <ul>
+      <li>Every price was read from the named source on 27 November 2026 — a deals roundup that names the store and the price it showed, or the retailer’s own release. The source and its date sit on every deal page.</li>
+      <li>The discount is computed from the two prices on the card, so the numbers always add up.</li>
+      <li>The verdict is honest on purpose: <b>NEW LOW</b> means the lowest price on record, <b>STRONG DEAL</b> means 40%+ off list, <b>SOLID</b> means a real cut that is not a record, and <b>ROUTINE SALE</b> means a small cut — buy it for the price, not the discount.</li>
+      <li>Links go to the store’s own search for the product, so the link always lands on the store with the matching product. Prices move on Black Friday — confirm at checkout.</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  Black Friday, Checked — an independent deal finder. Not affiliated with Amazon, Best Buy, Walmart, Target, or any brand listed. Prices as checked 27 Nov 2026.
+</footer>
+
+<script type="module" src="./main.js"></script>
+</body>
+</html>
